@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -189,7 +189,7 @@
 <body>
 <header>
   <h1>BANANAROLL</h1>
-  <h1>rasakan kelezatan dalam setiap gulungan</h1>
+  <h1>rasakan kelezatan dalam setiap gulungan🌷</h1>
 </header>
 
 <nav>
@@ -202,7 +202,7 @@
 </section>
 
 <section class="section">
-  <h2>PILIHAN RASA</h2>
+  <h2>PILIHAN RASA⬇⬇</h2>
   <div class="cards">
     <div class="card">
       <img src="https://i.pinimg.com/736x/c5/a3/a0/c5a3a05ddca24f234dc3515641258042.jpg" alt="Rasa Coklat">
@@ -218,8 +218,8 @@
       <p><strong>Harga: Rp13.000</strong></p>
       <button onclick="addToCart('Rasa Strawbery', 13000)">Tambah ke Keranjang</button>
     </div>
-    <div class="card">https://i.pinimg.com/736x/23/d2/ad/23d2ade085b20f7bda02b36a167afb21.jpg
-      <img src="" alt="Rasa Mix">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/23/d2/ad/23d2ade085b20f7bda02b36a167afb21.jpg" alt="Rasa Mix">
       <h3>rasa mix</h3>
       <p>bestsellerrr mantul</p>
       <p><strong>Harga: Rp13.000</strong></p>
@@ -234,7 +234,7 @@
     <div class="discount">whatsap</div>
   </a>
   <br/>
-  <button>Order Today</button>
+  <button>Bananaroll adalah cemilan manis berbentuk gulungan yang terbuat dari pisang yang dibalut dengan lembaran roti tawar. Pisang biasanya dipotong memanjang dan di gulung, kemudian diletakkan di atas roti tawar yang sudah dipipihkan. Setelah digulung dengan rapi, gulungan tersebut digoreng, lalu di kasi berbagai macam rasa dan toping tergantung selera pembeli🍌✨</button>
 </section>
 
 <section class="section" id="cart">
@@ -276,11 +276,11 @@
     let total = 0;
     cart.forEach(({ item, price }) => {
       const li = document.createElement('li');
-      li.textContent = `${item} - Rp${price.toLocaleString()}`;
+      li.textContent = ${item} - Rp${price.toLocaleString()};
       cartItemsEl.appendChild(li);
       total += price;
     });
-    totalEl.textContent = `Total: Rp${total.toLocaleString()}`;
+    totalEl.textContent = Total: Rp${total.toLocaleString()};
   }
 </script>
 </body>
