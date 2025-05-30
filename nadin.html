@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Bananaroll Online Shop</title>
+<style>
+  body {
+    font-family: 'Times New Roman', serif;
+    margin: 20px;
+    background-color: #fff8f0;
+    color: #4a2c2a;
+  }
+
+  header {
+    background-color: #ffdfba;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid #c1976b;
+  }
+
+  header h1 {
+    margin: 5px 0;
+  }
+
+  nav {
+    background-color: #f7cdd0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+    font-weight: bold;
+    color: #4a2c2a;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #4a2c2a;
+  }
+
+  .hero {
+    background: linear-gradient(to right, #fff1e0, #ffe4ea);
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    color: #4a2c2a;
+    margin-bottom: 20px;
+  }
+
+  .hero button {
+    background-color: #f28d8d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .section h2 {
+    color: #c97c63;
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background-color: #fff4e0;
+    border: 2px solid #c1976b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  }
+
+  .card img {
+    width: 200px; /* Ukuran gambar disamakan */
+    height: 200px; /* Ukuran gambar disamakan */
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .card button {
+    background-color: #f28d8d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .promo {
+    background-color: #fddde6;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .promo h3 {
+    color: #a65353;
+    margin-bottom: 10px;
+  }
+
+  .promo .discount {
+    font-size: 24px;
+    background: #ffe599;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0 20px;
+    border-radius: 8px;
+  }
+
+  .promo button {
+    background-color: #f28d8d;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  #cart {
+    margin-top: 40px;
+    background-color: #fff1e0;
+    padding: 30px;
+    border-top: 3px solid #c1976b;
+  }
+
+  #cart ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #cart li {
+    padding: 5px 0;
+  }
+
+  footer {
+    background-color: #d9a474;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+  }
+   footer {
+    background-color: #ffeb3b;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-top: 2px solid #e0c200;
+  }
+  footer .follow-us {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 0.5rem;
+  }
+  footer .social-icons a img {
+    width: 30px;
+    vertical-align: middle;
+    border-radius: 4px;
+  }
+
+</style>
+</head>
+<body>
+<header>
+  <h1>BANANAROLL</h1>
+  <h1>rasakan kelezatan dalam setiap gulungan</h1>
+</header>
+
+<nav>
+  <a href="#">HARGA MURAH, MENGENYANGKAN, TIDAK MENGURAS KANTONG</a>
+</nav>
+
+<section class="hero">
+  <h1>Delight in Every Bite!</h1>
+  <button>Order Now</button>
+</section>
+
+<section class="section">
+  <h2>PILIHAN RASA</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/c5/a3/a0/c5a3a05ddca24f234dc3515641258042.jpg" alt="Rasa Coklat">
+      <h3>rasa coklat</h3>
+      <p>coklat yang melimpah, dan lumer</p>
+      <p><strong>Harga: Rp13.000</strong></p>
+      <button onclick="addToCart('Rasa Coklat', 13000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="card">
+      <img src="https://i.pinimg.com/736x/d2/9a/79/d29a79c53a1ab388f10f0413724e7a54.jpg" alt="Rasa Strawbery">
+      <h3>rasa strawbery</h3>
+      <p>sweet dan lezat</p>
+      <p><strong>Harga: Rp13.000</strong></p>
+      <button onclick="addToCart('Rasa Strawbery', 13000)">Tambah ke Keranjang</button>
+    </div>
+    <div class="card">https://i.pinimg.com/736x/23/d2/ad/23d2ade085b20f7bda02b36a167afb21.jpg
+      <img src="" alt="Rasa Mix">
+      <h3>rasa mix</h3>
+      <p>bestsellerrr mantul</p>
+      <p><strong>Harga: Rp13.000</strong></p>
+      <button onclick="addToCart('Rasa Mix', 13000)">Tambah ke Keranjang</button>
+    </div>
+  </div>
+</section>
+
+<section class="promo">
+  <h3>KLIKK HERE!!</h3>
+  <a href="https://wa.me/6285697616947?text=Halo%2C%20saya%20ingin%20pesan%20Banana%20Roll">
+    <div class="discount">whatsap</div>
+  </a>
+  <br/>
+  <button>Order Today</button>
+</section>
+
+<section class="section" id="cart">
+  <h2>Keranjang Anda</h2>
+  <ul id="cart-items"></ul>
+  <p id="total">Total: Rp0</p>
+</section>
+
+<footer>
+  <div class="follow-us">Ikuti Kami</div>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/banana_roll29" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+    </a>
+    <a href="https://www.facebook.com/share/15LeSy4DdB/" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook" />
+    </a>
+    <a href="https://www.tiktok.com/@banana_roll_" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/3046/3046124.png" alt="TikTok" />
+    </a>
+    <a href="https://youtube.com/@bananaroll-x3h" target="_blank" rel="noopener">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174883.png" alt="YouTube" />
+    </a>
+  </div>
+</footer>
+
+<script>
+  const cart = [];
+  const cartItemsEl = document.getElementById('cart-items');
+  const totalEl = document.getElementById('total');
+
+  function addToCart(item, price) {
+    cart.push({ item, price });
+    renderCart();
+  }
+
+  function renderCart() {
+    cartItemsEl.innerHTML = '';
+    let total = 0;
+    cart.forEach(({ item, price }) => {
+      const li = document.createElement('li');
+      li.textContent = `${item} - Rp${price.toLocaleString()}`;
+      cartItemsEl.appendChild(li);
+      total += price;
+    });
+    totalEl.textContent = `Total: Rp${total.toLocaleString()}`;
+  }
+</script>
+</body>
+</html>
