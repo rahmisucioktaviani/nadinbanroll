@@ -1,4 +1,4 @@
-DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -89,8 +89,8 @@ DOCTYPE html>
   }
 
   .card img {
-    width: 200px; /* Ukuran gambar disamakan */
-    height: 200px; /* Ukuran gambar disamakan */
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -155,35 +155,30 @@ DOCTYPE html>
   }
 
   footer {
-    background-color: #d9a474;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    margin-top: 40px;
-  }
-   footer {
     background-color: #ffeb3b;
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
     border-top: 2px solid #e0c200;
   }
+
   footer .follow-us {
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
+
   footer .social-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 0.5rem;
   }
+
   footer .social-icons a img {
     width: 30px;
     vertical-align: middle;
     border-radius: 4px;
   }
-
 </style>
 </head>
 <body>
@@ -202,7 +197,7 @@ DOCTYPE html>
 </section>
 
 <section class="section">
-  <h2>PILIHAN RASA⬇⬇</h2>
+  <h2>PILIHAN RASA⬇️⬇️</h2>
   <div class="cards">
     <div class="card">
       <img src="https://i.pinimg.com/736x/c5/a3/a0/c5a3a05ddca24f234dc3515641258042.jpg" alt="Rasa Coklat">
@@ -230,11 +225,11 @@ DOCTYPE html>
 
 <section class="promo">
   <h3>KLIKK HERE!!</h3>
-  <a href="https://wa.me/6285697616947?text=Halo%2C%20saya%20ingin%20pesan%20Banana%20Roll">
+  <a href="https://wa.me/6285697616947?text=Halo%2C%20saya%20ingin%20pesan%20Banana%20Roll" target="_blank" id="wa-link">
     <div class="discount">whatsap</div>
   </a>
   <br/>
-  <button>Bananaroll adalah cemilan manis berbentuk gulungan yang terbuat dari pisang yang dibalut dengan lembaran roti tawar. Pisang biasanya dipotong memanjang dan di gulung, kemudian diletakkan di atas roti tawar yang sudah dipipihkan. Setelah digulung dengan rapi, gulungan tersebut digoreng, lalu di kasi berbagai macam rasa dan toping tergantung selera pembeli🍌✨</button>
+  <button>Bananaroll adalah cemilan manis berbentuk gulungan yang terbuat dari pisang yang dibalut dengan lembaran roti tawar. Pisang biasanya dipotong memanjang dan digulung, kemudian diletakkan di atas roti tawar yang sudah dipipihkan. Setelah digulung dengan rapi, gulungan tersebut digoreng, lalu dikasih berbagai macam rasa dan toping tergantung selera pembeli🍌✨</button>
 </section>
 
 <section class="section" id="cart">
@@ -269,6 +264,7 @@ DOCTYPE html>
   function addToCart(item, price) {
     cart.push({ item, price });
     renderCart();
+    updateWhatsAppLink();
   }
 
   function renderCart() {
@@ -276,11 +272,26 @@ DOCTYPE html>
     let total = 0;
     cart.forEach(({ item, price }) => {
       const li = document.createElement('li');
-      li.textContent = ${item} - Rp${price.toLocaleString()};
+      li.textContent = `${item} - Rp${price.toLocaleString()}`;
       cartItemsEl.appendChild(li);
       total += price;
     });
-    totalEl.textContent = Total: Rp${total.toLocaleString()};
+    totalEl.textContent = `Total: Rp${total.toLocaleString()}`;
+  }
+
+  function updateWhatsAppLink() {
+    let message = 'Halo%2C%20saya%20ingin%20pesan%20Banana%20Roll%20dengan%20detail%20sebagai%20berikut%3A%0A';
+    let total = 0;
+    cart.forEach(({ item, price }, index) => {
+      message += `${index + 1}.%20${item}%20-%20Rp${price.toLocaleString()}%0A`;
+      total += price;
+    });
+    message += `%0ATotal%3A%20Rp${total.toLocaleString()}`;
+    const waLink = `https://wa.me/6285697616947?text=${message}`;
+    const waAnchor = document.querySelector('.promo a');
+    if (waAnchor) {
+      waAnchor.href = waLink;
+    }
   }
 </script>
 </body>
